@@ -123,25 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &132842860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9068725125979192164, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
-  m_PrefabInstance: {fileID: 1524325362}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &132842861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132842860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf6a1dfbfccf2324d91d274f0dcdd9cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1445792113}
-  speed: 3
 --- !u!1 &1445792110
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,18 +241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 272308859509768601, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 272308859509768601, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548331441093766247, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 132842861, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1445792113}
     - target: {fileID: 7694352171513530596, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -320,12 +293,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 9068725125979192164, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7548331441093766247, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de67cb85f9f8b7e418b69dc6b51cea52, type: 3}
 --- !u!1 &1612415072
 GameObject:
