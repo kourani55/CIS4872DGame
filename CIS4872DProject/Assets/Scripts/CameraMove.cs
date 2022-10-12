@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public int speed = 10; 
-    private void Update()
+    public GameObject player; 
+
+    void Update()
     {
-        transform.position += Vector3.right * Time.deltaTime * speed;
+        Vector3 temp = new Vector3(0, 0, 0);
+        player.transform.position += temp;
+        transform.position = temp;
+         
+
     }
 }
