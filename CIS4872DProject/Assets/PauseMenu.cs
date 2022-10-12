@@ -8,8 +8,12 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject player;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        pauseMenuUI.SetActive(false);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -29,13 +33,16 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        player.SetActive(true);
         GameIsPaused = false;
+
     }
 
     void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        player.SetActive(false);
         GameIsPaused = true;
     }
 
