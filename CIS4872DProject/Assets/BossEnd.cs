@@ -5,13 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class BossEnd : MonoBehaviour
 {
-    
- 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public Transform target;
+    private void Update()
     {
-        if (collision.gameObject.tag == "Player")
+        if(transform.position == target.transform.position)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); 
         }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        SceneManager.LoadScene(0);
+    //    }
+    //}
 }
