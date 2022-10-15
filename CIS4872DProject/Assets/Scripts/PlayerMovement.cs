@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed; // movement speed
     public Rigidbody2D rb;  //forces to player 
 
     public float jumpForce = 10f;
-    public int extraJump = 1;
+    public int extraJump = 0;
     public Transform feet;
     public LayerMask groundLayers;
 
@@ -33,9 +34,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             Jump(); //calls the jump function  
-            doubleJumpAllowed = true;
+            doubleJumpAllowed = false;
         }
-        else if (Input.GetButtonDown("Jump") && doubleJumpAllowed) //will allow the player to double jump
+
+       /* else if (Input.GetButtonDown("Jump") && doubleJumpAllowed) //will allow the player to double jump
         {
             Jump();
             doubleJumpAllowed = false;
@@ -44,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(movementSpeed * touchingLeftorRight, jumpForce);
         }
+        */
 
     }
     void SetJumpingToFalse()
