@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BossEnd : MonoBehaviour
 {
     public Transform target;
-    private void Update()
+    private void FixedUpdate()
     {
         if(transform.position == target.transform.position)
         {
