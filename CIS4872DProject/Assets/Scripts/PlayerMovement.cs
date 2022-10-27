@@ -37,16 +37,17 @@ public class PlayerMovement : MonoBehaviour
             doubleJumpAllowed = false;
         }
 
-       /* else if (Input.GetButtonDown("Jump") && doubleJumpAllowed) //will allow the player to double jump
+        else if (Input.GetButtonDown("Jump") && doubleJumpAllowed) //will allow the player to double jump
         {
             Jump();
             doubleJumpAllowed = false;
         }
-        if (Walljumping)
+        if (Walljumping == true)
         {
             rb.velocity = new Vector2(movementSpeed * touchingLeftorRight, jumpForce);
+            SetJumpingToFalse();
         }
-        */
+
 
     }
     void SetJumpingToFalse()
