@@ -11,6 +11,7 @@ public class DeathZone : MonoBehaviour
         //Destroy(other.gameObject);
         // SceneManager.LoadScene(0);
         deathMenuUI.SetActive(true);
+        Time.timeScale = 0f;
 
     }
    
