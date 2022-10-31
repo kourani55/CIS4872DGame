@@ -6,6 +6,8 @@ public class Chase : MonoBehaviour
 {
     public Transform target;
     public float speed;
+    public float speedIncrease = 0.005f; 
+     
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +16,11 @@ public class Chase : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        
+        speed = speed + speedIncrease; 
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        
     }
 }
