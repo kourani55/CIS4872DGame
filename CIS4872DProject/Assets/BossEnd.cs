@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class BossEnd : MonoBehaviour
 {
     public Transform target;
+    public GameObject deathMenuUI;
     private void FixedUpdate()
     {
         if(transform.position == target.transform.position)
         {
-            SceneManager.LoadScene(0); 
+            deathMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
