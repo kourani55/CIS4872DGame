@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-     private void OnTriggerEnter2D(Collider2D other)
+    public GameObject deathMenuUI;
+    private void OnTriggerEnter2D(Collider2D other)
     {
         //Destroy(other.gameObject);
-        SceneManager.LoadScene(0);
-       
+        // SceneManager.LoadScene(0);
+        deathMenuUI.SetActive(true);
+
     }
    
     
